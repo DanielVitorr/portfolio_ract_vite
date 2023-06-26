@@ -1,7 +1,28 @@
 import { styled } from 'styled-components'
 
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px',
+}
+
+export const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`,
+}
+
 export const ContainerProjects = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   padding: 70px 20px;
@@ -12,12 +33,38 @@ export const ContainerProjects = styled.div`
   gap: 150px;
 
   flex-shrink: 0;
+
+  @media ${device.mobileS} {
+    max-width: 320px;
+    max-height: 100%;
+  }
+
+  @media ${device.mobileM} {
+    max-width: 375px;
+    max-height: 100%;
+  }
+
+  @media ${device.mobileL} {
+    max-width: 425px;
+    max-height: 100%;
+  }
+
+  @media ${device.desktopL} {
+    max-width: 2560px;
+    max-height: 100%;
+  }
 `
 export const GrupCardContainer = styled.div`
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  /* grid-auto-flow: column; */
   justify-content: space-around;
   align-self: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  @media ${device.mobileS} {
+    flex-direction: column;
+  }
 `
 export const CardProjectContainer = styled.div`
   width: 405px;
