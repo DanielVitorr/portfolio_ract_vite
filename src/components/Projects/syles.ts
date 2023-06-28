@@ -1,24 +1,14 @@
 import { styled } from 'styled-components'
 
 const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
+  mobile: '450px',
   tablet: '768px',
   laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px',
 }
 
 export const device = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
-  tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`,
+  mobile: `(max-width: ${size.mobile})`,
+  tablet: `(max-width: ${size.tablet}) and max-width: ${size.laptop}`,
 }
 
 export const ContainerProjects = styled.div`
@@ -34,23 +24,15 @@ export const ContainerProjects = styled.div`
 
   flex-shrink: 0;
 
-  @media ${device.mobileS} {
+  @media ${device.mobile} {
     max-width: 320px;
     max-height: 100%;
+
+    padding: 80px 20px;
   }
 
-  @media ${device.mobileM} {
-    max-width: 375px;
-    max-height: 100%;
-  }
-
-  @media ${device.mobileL} {
-    max-width: 425px;
-    max-height: 100%;
-  }
-
-  @media ${device.desktopL} {
-    max-width: 2560px;
+  @media ${device.tablet} {
+    max-width: 1024px;
     max-height: 100%;
   }
 `
@@ -62,7 +44,7 @@ export const GrupCardContainer = styled.div`
   gap: 40px;
   flex-wrap: wrap;
 
-  @media ${device.mobileS} {
+  @media ${device.mobile} {
     flex-direction: column;
   }
 `
@@ -80,6 +62,10 @@ export const CardProjectContainer = styled.div`
   border-radius: 8px;
   border: 2px solid ${(props) => props.theme.colors.primary};
 
+  @media ${device.mobile} {
+    width: 290px;
+  }
+
   img {
     max-width: -webkit-fill-available;
 
@@ -88,7 +74,7 @@ export const CardProjectContainer = styled.div`
   }
 `
 export const InformationContainer = styled.div`
-  width: 384px;
+  width: 100%;
 
   padding: 12px 0px;
 
@@ -116,6 +102,10 @@ export const InformationContainer = styled.div`
     align-items: center;
 
     list-style: none;
+
+    @media ${device.mobile} {
+      flex-direction: column;
+    }
 
     li {
       padding: 10px 0px;

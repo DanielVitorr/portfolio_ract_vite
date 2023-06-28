@@ -1,24 +1,14 @@
 import { styled } from 'styled-components'
 
 const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
+  mobile: '450px',
   tablet: '768px',
   laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px',
 }
 
 export const device = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-  desktop: `(min-width: ${size.desktop})`,
-  desktopL: `(min-width: ${size.desktop})`,
+  mobile: `(max-width: ${size.mobile})`,
+  tablet: `(max-width: ${size.tablet}) and max-width: ${size.laptop}`,
 }
 
 export const AboutMeContainer = styled.div`
@@ -33,29 +23,23 @@ export const AboutMeContainer = styled.div`
 
   padding: 0 20px;
 
-  @media ${device.mobileS} {
-    max-width: 320px;
+  @media ${device.mobile} {
+    max-width: 100%;
     max-height: 100%;
   }
 
-  @media ${device.mobileM} {
-    max-width: 375px;
-    max-height: 100%;
-  }
-
-  @media ${device.mobileL} {
-    max-width: 425px;
-    max-height: 100%;
-  }
-
-  @media ${device.desktopL} {
-    max-width: 2560px;
+  @media ${device.tablet} {
+    max-width: 100%;
     max-height: 100%;
   }
 `
 export const ContainerWhoUIAm = styled.div`
   p {
     font-size: 2rem;
+
+    @media ${device.mobile} {
+      font-size: 1rem;
+    }
 
     span {
       color: ${(props) => props.theme.colors.primary};
@@ -65,15 +49,39 @@ export const ContainerWhoUIAm = styled.div`
 
   h1 {
     font-size: 3rem;
+
+    @media ${device.mobile} {
+      font-size: 2rem;
+    }
   }
 `
 export const SummaryContainer = styled.div`
   width: 714px;
 
   font-size: 1.25rem;
+
+  @media ${device.mobile} {
+    font-size: 1rem;
+
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media ${device.tablet} {
+    max-width: 100%;
+    max-height: 100%;
+  }
 `
 export const ContainerSocialNetworks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
   font-size: 1.5rem;
+
+  @media ${device.mobile} {
+    font-size: 1rem;
+  }
 
   ul {
     display: flex;
