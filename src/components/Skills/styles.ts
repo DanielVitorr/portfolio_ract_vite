@@ -20,7 +20,7 @@ export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 150px;
+  gap: 40px;
 
   flex-shrink: 0;
 
