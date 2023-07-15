@@ -39,7 +39,6 @@ Agora você pode abrir o seu navegador e acessar o seguinte endereço: http://lo
 * /src: Contém o código-fonte da aplicação.
 * /components: Contém os componentes React reutilizáveis.
 * /pages: Contém as páginas principais do portfólio.
-* /data: Contém dados dos projetos exibidos no portfólio.
 
 ### Contribuição
 Contribuições são bem-vindas! Se você encontrar problemas, tiver sugestões de melhorias ou desejar adicionar novos recursos, sinta-se à vontade para abrir um "issue" ou enviar um "pull request".
