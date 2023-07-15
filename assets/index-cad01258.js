@@ -215,7 +215,7 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 150px;
+  gap: 40px;
 
   flex-shrink: 0;
 
@@ -314,7 +314,7 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 150px;
+  gap: 40px;
 
   flex-shrink: 0;
 
