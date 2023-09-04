@@ -11,6 +11,7 @@ import { Img } from 'react-image'
 import FlappyBird from '../../assets/flappybird.png'
 import Calculadora from '../../assets/Calculadora.png'
 import MataMosquito from '../../assets/MataMosquito.png'
+import ToDo from '../../assets/ToDoListInlustration.png'
 
 export function Projects() {
   return (
@@ -116,6 +117,43 @@ export function Projects() {
                 Acessar Página
                 <a
                   href="https://danielvitorr.github.io/App_Game_MataMosquito/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaExternalLinkAlt size={25} />
+                </a>
+              </li>
+            </ul>
+          </InformationContainer>
+        </CardProjectContainer>
+        <CardProjectContainer>
+          <Img src={ToDo} />
+
+          <InformationContainer>
+            <h1>ToDo List</h1>
+
+            <p>
+              Esta é uma simples página web que permite aos usuários criar,
+              gerenciar e acompanhar suas listas de tarefas. Criada em react
+              utilizando a linguagem TypeScript, juntamento com framework vite,
+              e biblioteca Styled-components para a estilisação dos componentes.
+            </p>
+
+            <ul>
+              <li>
+                Visualizar Códigos
+                <a
+                  href="https://github.com/DanielVitorr/todoList"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub size={25} />
+                </a>
+              </li>
+              <li>
+                Acessar Página
+                <a
+                  href="https://danielvitorr.github.io/todoList/"
                   target="_blank"
                   rel="noreferrer"
                 >

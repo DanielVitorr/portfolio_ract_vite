@@ -23,6 +23,7 @@ export const Container = styled.div`
   padding: 10px;
 
   color: ${(props) => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.secundary};
 
   @media ${device.mobile} {
     flex-direction: column;
